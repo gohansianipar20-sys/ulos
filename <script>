@@ -1,5 +1,22 @@
 
-const warnaUtama = document.getElementById("warnaUtama");
-const warnaLatar = document.getElementById("warnaLatar");
-const kerapatan = document.getElementById("kerapatan");
-const ukuranKontrol = document.getElementById("ukuran");
+warnaUtama.addEventListener("input", tampilkanMotif);
+warnaLatar.addEventListener("input", tampilkanMotif);
+kerapatan.addEventListener("input", tampilkanMotif);
+ukuranKontrol.addEventListener("input", tampilkanMotif);
+
+kerapatan.addEventListener("input", function () {
+  document.getElementById("kerapatanText").textContent =
+    kerapatan.value + "%";
+});
+
+ukuranKontrol.addEventListener("input", function () {
+  document.getElementById("ukuranText").textContent =
+    ukuranKontrol.value + "%";
+});
+
+document.getElementById("simpanPng").addEventListener("click", function () {
+  const tautan = document.createElement("a");
+  tautan.download = "ulos-fraktal.png";
+  tautan.href = kanvas.toDataURL("image/png");
+  tautan.click();
+});
