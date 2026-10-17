@@ -1,0 +1,5 @@
+
+const warnaUtama = document.getElementById("warnaUtama");
+const warnaLatar = document.getElementById("warnaLatar");
+const kerapatan = document.getElementById("kerapatan");
+const ukuranKontrol = document.getElementById("ukuran");
